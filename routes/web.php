@@ -74,7 +74,7 @@ $router->group(['prefix' => 'siswa'], function () use ($router) {
 	$router->post('/update',  ['as'=>'update-siswa','uses' => 'SiswaController@update']);
 });
 
-// Untuk Role Dan Permission
+// Untuk Roleh Dan Permission
 $router->group(['prefix' => 'role'], function () use ($router) {
 	$router->get('/',  ['as'=>'role','uses' => 'RoleController@index']);
 	$router->get('/create',  ['as'=>'create-role','uses' => 'RoleController@create']);
@@ -106,7 +106,7 @@ $router->group(['prefix' => 'alquran'], function () use ($router) {
 });
 
 
-// Untuk Profile
+// Untuk Profile Student
 $router->group(['prefix' => 'profile'], function () use ($router) {
 	$router->get('/',  ['as'=>'profile','uses' => 'ProfileController@index']);
 	$router->post('/update',  ['as'=>'update-profile','uses' => 'ProfileController@update']);
@@ -115,7 +115,7 @@ $router->group(['prefix' => 'profile'], function () use ($router) {
 });
 
 
-// Untuk Assessment
+// Untuk Student Assessment
 $router->group(['prefix' => 'assessment'], function () use ($router) {
 	$router->get('/',  ['as'=>'assessment','uses' => 'AssessmentController@index']);
 	$router->get('/assessment/{type}',  ['as'=>'create-assessment','uses' => 'AssessmentController@assessment']);
@@ -139,7 +139,7 @@ $router->group(['prefix' => 'student-report'], function () use ($router) {
 	$router->get('/print',  ['as'=>'student-report-print','uses' => 'StudentReportController@printPdf']);
 });
 
-// Untuk Action Log
+// Untuk Log Activity
 $router->group(['prefix' => 'action-log'], function () use ($router) {
 	$router->get('/',  ['as'=>'action-log','uses' => 'ActionLogController@index']);
 	$router->post('/remove',  ['as'=>'action-log-remove','uses' => 'ActionLogController@destroy']);
